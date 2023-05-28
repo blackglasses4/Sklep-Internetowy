@@ -22,6 +22,7 @@ body {
 }
 
 header {
+    z-index: 100;
     width: 100%;
     margin: 0 auto;
     height: 100px;
@@ -32,6 +33,10 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+main {
+    z-index: 99;
 }
 
 nav {
@@ -87,7 +92,7 @@ h2 {
 }
 
 .slides {
-    width: 100%;
+    width: 400%;
     height: 650px;
     display: flex;
 }
@@ -97,16 +102,8 @@ h2 {
 }
 
 .slide {
-    flex: 1;
-    transition: 2s;
-}
-
-.slide.first {
-    opacity: 1;
-}
-
-.slide  {
-    opacity: 0;
+    width: 25%;
+    height: 650px;
 }
 
 .slide img {
@@ -117,7 +114,7 @@ h2 {
 
 .navigation-manual {
     position: absolute;
-    width: 50%;
+    width: 45%;
     margin-left: 20%;
     margin-top: 600px;
     display: flex;
@@ -133,5 +130,27 @@ h2 {
 }
 
 .manual-btn:not(:last-child) {
-    margin-right: 3px;
+    margin-right: 40px;
 }
+
+.manual-btn:hover {
+    background: white;
+}
+
+#radio1:checked ~ .slide {
+    transform: translateX(0%);
+    transition: 2s;
+}
+#radio2:checked ~ .slide {
+    transform: translateX(-100%);
+    transition: 2s;
+}
+#radio3:checked ~ .slide {
+    transform: translateX(-200%);
+    transition: 2s;
+}
+#radio4:checked ~ .slide {
+    transform: translateX(-300%);
+    transition: 2s;
+}
+
