@@ -1,5 +1,8 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -14,23 +17,23 @@
 
 <body>
     <header>
-        <img id="logo" src="logo.png">
+        <img id="logo" src="picture/logo.png">
         <nav>
             <div class="nav-div">
                 <ul>
-                    <li><a href="#menu">menu</a></li>
+                    <li><a href="./index.php" class="active">menu</a></li>
                     <li><a href="#kupony">kupony</a></li>
                     <li><a href="#kontakt">kontakt</a></li>
                 </ul>
             </div>
             <div class="nav-div">
-                <h1>Nazwa Firmy</h1>
+                <h1 class="company-name">Nazwa Firmy</h1>
             </div>
             <div class="nav-div">
                 <ul>
-                    <li><a href="#logowanie">logowanie</a></li>
+                    <li><a href="./logowanie.php">logowanie</a></li>
                     <span style="color:white">/</span>
-                    <li><a href="#rejestracja">rejestracja</a></li>
+                    <li><a href="./rejestracja.php">rejestracja</a></li>
                 </ul>
             </div>
         </nav>
@@ -46,19 +49,19 @@
 
                     <div class="slide first">
                         <!-- <h1>Naleśniki z polewą</h1> -->
-                        <img src="1.jpg" alt="ostre danie">
+                        <img src="picture/1.jpg" alt="ostre danie">
                     </div>
                     <div class="slide two">
                         <!-- <h1>Pizza</h1> -->
-                        <img src="2.jpg" alt="trzy napoje">
+                        <img src="picture/2.jpg" alt="trzy napoje">
                     </div>
                     <div class="slide three">
                         <!-- <h1>Mini burger</h1> -->
-                        <img src="3.jpg" alt="pizza">
+                        <img src="picture/3.jpg" alt="pizza">
                     </div>
                     <div class="slide four">
                         <!-- <h1>Brokuły polewane oliwą</h1> -->
-                        <img src="4.jpg" alt="Kawa ze śmietaną">
+                        <img src="picture/4.jpg" alt="Kawa ze śmietaną">
                     </div>
                     
                     <div class="navigation-auto">
