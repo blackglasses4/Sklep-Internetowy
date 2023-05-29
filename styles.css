@@ -41,6 +41,10 @@ main {
     z-index: 99;
 }
 
+footer {
+    z-index: 98;
+}
+
 nav {
     width: 100%;
     margin-left: 5%;
@@ -49,28 +53,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-}
-
-.nav-div ul, h1 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-inline-start: 0;
-    margin-block: 0;
-    height: 100%;
-}
-
-.nav-div a:hover,
-.nav-div a.active  {
-    color: #373764;
-}
-
-
-.nav-div > ul > li {
-    color: #dfdfe2;
-    margin: 0 0.2rem;
-    padding: 0.2rem;
-    display: flex;
 }
 
 a {
@@ -167,5 +149,16 @@ h2 {
 #radio4:checked ~ .slide {
     transform: translateX(-300%);
     transition: 2s;
+}
+
+.footer {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
