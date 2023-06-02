@@ -1,7 +1,7 @@
   /* config.css */
   
 :root {
-    --baseColor: #606468;
+    --baseColor: #0d8a1d;
   }
   
   /* helpers/align.css */
@@ -49,7 +49,7 @@ body {
   }
 
 .ikona {
-    color: #606468;
+    color: #0d8a1d;
 }
   
   /* layout/base.css */
@@ -76,7 +76,8 @@ html {
   }
   
 body {
-    background-color: var(--bodyBackgroundColor);
+    background-image: url(picture/7.jpg);
+    background-size: cover;
     color: var(--bodyColor);
     font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
     font-size: var(--bodyFontSize);

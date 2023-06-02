@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Final project presenting an online store">
     <title></title>
-    <link rel="stylesheet" href="styles-login.css">
+    <link rel="stylesheet" href="styles-login2.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/8f533e6340.js" crossorigin="anonymous"></script>
