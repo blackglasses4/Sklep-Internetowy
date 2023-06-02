@@ -23,6 +23,11 @@ if(isset($_POST['submit-login']))
         header("Location: ../logowanie.php?error=differentpasswords"); //odsyła ponownie
         exit();
     }
+    else if(!preg_match("/^[a-zA-Z0-9]*$/", $username))
+    {
+        header("Location: ../logowanie.php?error=invalidUsername"); //odsyła ponownie
+        exit();
+    }
     else {
         $sql = "INSERT INTO users (username, email, pass) VALUES (?,?,?)";
         $stmt = mysqli_stmt_init($servername);
@@ -42,13 +47,10 @@ if(isset($_POST['submit-login']))
             exit();
         }
     }
-
 }
 else
 {
     header("Location: ../logowanie.php");
     exit();
 }
-
-
 ?>
