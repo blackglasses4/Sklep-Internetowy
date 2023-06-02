@@ -5,42 +5,251 @@ session_start();
 <html lang="pl" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Final project presenting an online store">
-    <title></title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">    
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Final project presenting an online store">
+  <title></title>
+  <link rel="stylesheet" href="styles-menu.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@1,500&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
-    <header>
-        <img id="logo" src="picture/logo.png">
-        <nav>
-            <h1 class="company-name">Nazwa Firmy</h1>
-            <div class="nav-left">
-                <ul>
-                    <li><a href="./index.php" class="active">menu</a></li>
-                    <li><a href="#kupony">kupony</a></li>
-                    <li><a href="#kontakt">kontakt</a></li>
-                </ul>
+  <header>
+    <h1 class="company-name">Nazwa Firmy</h1>
+
+    <ul class="menu">
+      <li><a href="./index.html" class="active">menu</a></li>
+      <li><a href="#kupony">kupony</a></li>
+      <li><a href="#kontakt">kontakt</a></li>
+    </ul>
+
+    <div class="login-icon">
+      <a href="./logowanie.php"><i class='bx bxs-user'></i></a>
+      <a href="#"><i class='bx bxs-cart'></i></a>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+  </header class="sticky">
+  <main>
+      <section class="main-home">
+        <div class="main-text">
+          <h5>Winter Collection</h5>
+          <h1>New Winter <br> Collection </h1>
+          <p>There's Nothing like Trend</p>
+
+          <a href="#" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+
+        <div class="down-arrow">
+          <a href="#trending" class="down"><i class='bx bx-down-arrow-alt' ></i></a>
+        </div>
+      </section>
+      
+      <!-- trending-product-section -->
+      <section class="trending-product" id="trending">
+          <div class="center-text">
+            <h2>Our Trending <span>Products</span></h2>
+          </div>
+
+          <div class="products">
+            <div class="row">
+              <img src="picture/2.jpg" alt="">
+              <div class="product-text">
+                <h5>Sale</h5>
+              </div>
+              <div class="heart-icon">
+                <i class='bx bx-heart' ></i>
+              </div>
+              <div class="ratting">
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                <h4>Half Running Set</h4>
+                <p>$99 - $129</p>
+              </div>
             </div>
-            <div class="nav-right">
-                <ul>
-                    <li><a href="./logowanie.php">logowanie</a></li>
-                    <span style="color:white">/</span>
-                    <li><a href="./rejestracja.php">rejestracja</a></li>
-                </ul>
+            <!-- ----- -->
+            <div class="row">
+              <img src="picture/3.jpg" alt="">
+              <div class="product-text">
+                <h5>New</h5>
+              </div>
+              <div class="heart-icon">
+                <i class='bx bx-heart' ></i>
+              </div>
+              <div class="ratting">
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                <h4>Half Running Set</h4>
+                <p>$99 - $129</p>
+              </div>
             </div>
-        </nav>
-    </header>
-    <main>
-            <!-- <div class="slider">
+            <!-- ----- -->
+            <div class="row">
+              <img src="picture/4.jpg" alt="">
+
+              <div class="heart-icon">
+                <i class='bx bx-heart' ></i>
+              </div>
+              <div class="ratting">
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                <h4>Half Running Set</h4>
+                <p>$99 - $129</p>
+              </div>
+            </div>
+            <!-- ----- -->
+            <div class="row">
+              <img src="picture/1.jpg" alt="">
+              <div class="product-text">
+                <h5>Hot</h5>
+              </div>
+              <div class="heart-icon">
+                <i class='bx bx-heart' ></i>
+              </div>
+              <div class="ratting">
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                <h4>Half Running Set</h4>
+                <p>$99 - $129</p>
+              </div>
+            </div>
+            <!-- ----- -->
+            <div class="row">
+              <img src="picture/2.jpg" alt="">
+
+              <div class="heart-icon">
+                <i class='bx bx-heart' ></i>
+              </div>
+              <div class="ratting">
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                <h4>Half Running Set</h4>
+                <p>$99 - $129</p>
+              </div>
+            </div>
+            <!-- ----- -->
+            <div class="row">
+              <img src="picture/3.jpg" alt="">
+              <div class="product-text">
+                <h5>Hot</h5>
+              </div>
+              <div class="heart-icon">
+                <i class='bx bx-heart' ></i>
+              </div>
+              <div class="ratting">
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                <h4>Half Running Set</h4>
+                <p>$99 - $129</p>
+              </div>
+            </div>
+            <!-- ----- -->
+            <div class="row">
+              <img src="picture/4.jpg" alt="">
+              <div class="product-text">
+                <h5>Sale</h5>
+              </div>
+              <div class="heart-icon">
+                <i class='bx bx-heart' ></i>
+              </div>
+              <div class="ratting">
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                <h4>Half Running Set</h4>
+                <p>$99 - $129</p>
+              </div>
+            </div>
+            <!-- ----- -->
+            <div class="row">
+              <img src="picture/1.jpg" alt="">
+              <div class="product-text">
+                <h5>Sale</h5>
+              </div>
+              <div class="heart-icon">
+                <i class='bx bx-heart' ></i>
+              </div>
+              <div class="ratting">
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bx-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+              </div>
+
+              <div class="price">
+                <h4>Half Running Set</h4>
+                <p>$99 - $129</p>
+              </div>
+            </div>
+            <!-- ----- -->
+
+          </div>
+
+      </section>
+
+
+    <!-- <div class="slider">
                 <div class="slides">
 
                     <input type="radio" name="radio-btn" id="radio1" checked>
@@ -80,88 +289,18 @@ session_start();
                     </div>
                 </div>
             </div> -->
-        <div class="main">
-            <section role="region" aria-labelledby="kupony">
-                <h2 id="kupony">kupony</h2>
-            </section>
-            <section role="region" aria-labelledby="kontakt">
-                <h2 id="kontakt">kontakt</h2>
-            </section>
-            <section role="region" aria-labelledby="html-questions">
-                <h2 id="html-questions">HTML</h2>
-                <div class="question-block">
-                  <p>1</p>
-                  <fieldset class="question" name="html-question-one">
-                    <legend>
-                      The legend element represents a caption for the content of its
-                      parent fieldset element
-                    </legend>
-                    <ul class="answers-list">
-                      <li>
-                        <label for="q1-a1">
-                          <input type="radio" id="q1-a1" name="q1" value="true" />
-                          True
-                        </label>
-                      </li>
-                      <li>
-                        <label for="q1-a2">
-                          <input type="radio" id="q1-a2" name="q1" value="false" />
-                          False
-                        </label>
-                      </li>
-                    </ul>
-                  </fieldset>
-                </div>
-                <div class="question-block">
-                  <p>2</p>
-                  <fieldset class="question" name="html-question-two">
-                    <legend>
-                      A label element nesting an input element is required to have a
-                      for attribute with the same value as the input's id
-                    </legend>
-                    <ul class="answers-list">
-                      <li>
-                        <label for="q2-a1">
-                          <input type="radio" id="q2-a1" name="q2" value="true" />
-                          True
-                        </label>
-                      </li>
-                      <li>
-                        <label for="q2-a2">
-                          <input type="radio" id="q2-a2" name="q2" value="false" />
-                          False
-                        </label>
-                      </li>
-                    </ul>
-                  </fieldset>
-                </div>
-              </section>
-              <section role="region" aria-labelledby="css-questions">
-                <h2 id="css-questions">CSS</h2>
-                <div class="formrow">
-                  <div class="question-block">
-                    <label for="customer">Are you a frontend developer?</label>
-                  </div>
-                  <div class="answer">
-                    <select name="customer" id="customer" required>
-                      <option value="">Select an option</option>
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
-                    </select>
-                  </div>
-                  <div class="question-block">
-                    <label for="css-questions">Do you have any questions:</label>
-                  </div>
-                  <div class="answer">
-                    <textarea id="css-questions" name="css-questions" rows="5" cols="24" placeholder="Who is flexbox..."></textarea>
-                  </div>
-                </div>
-              </section>
-        </div>
-    </main>
-    <footer>
-        ©Copyright 2023 by nobody. All rights reversed.
-    </footer>
+    <!-- <div class="main">
+      <section role="region" aria-labelledby="kupony">
+        <h2 id="kupony">kupony</h2>
+      </section>
+      <section role="region" aria-labelledby="kontakt">
+        <h2 id="kontakt">kontakt</h2>
+      </section>
+    </div> -->
+  </main>
+  <!-- <footer>
+    ©Copyright 2023 by nobody. All rights reversed.
+  </footer> -->
 </body>
 
 </html>
