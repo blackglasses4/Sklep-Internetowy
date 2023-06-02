@@ -18,7 +18,7 @@ session_start();
 
 <body>
     <div class="container">
-        <form action="" method="POST" class="form login">
+        <form action="include/signup.inc.php" method="POST" class="form login">
 
             <div class="form-field">
                 <label for="login-username"><svg class="icon">
@@ -40,7 +40,7 @@ session_start();
                 <label for="login-email">
                 <span class="ikona"><i class="fa-solid fa-envelope icon"></i></span>
                 <span class="schowany">Powtórz email</span></label>
-                <input autocomplete="email" id="login-email" type="email" name="email" class="form-input"
+                <input autocomplete="email" id="login-email" type="email" name="email2" class="form-input"
                     placeholder="Powtórz email" required>
             </div>
 
@@ -56,12 +56,12 @@ session_start();
                 <label for="login-password"><svg class="icon">
                         <use xlink:href="#icon-lock"></use>
                     </svg><span class="schowany">Powtórz hasło</span></label>
-                <input id="login-password" type="password" name="password" class="form-input"
+                <input id="login-password" type="password" name="password2" class="form-input"
                     placeholder="Powtórz hasło" required>
             </div>
 
             <div class="form-field">
-                <input type="submit" value="Zarejestruj się">
+                <input type="submit" name="submit-login" value="Zarejestruj się">
             </div>
 
         </form>

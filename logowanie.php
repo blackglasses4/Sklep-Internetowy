@@ -18,7 +18,7 @@ session_start();
 
 <body>
     <div class="container">
-        <form action="" method="POST" class="form login">
+        <form action="include/login.inc.php" method="POST" class="form login">
 
             <div class="form-field">
                 <label for="login-username">
