@@ -32,10 +32,10 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $stmt = mysqli_stmt_init($servername);
         $result = mysqli_stmt_prepare($stmt, $sql);
 
-        if(mysqli_num_rows($result)) 
-        {
-            echo "Hello";
-        }
+        // if(mysqli_num_rows()) 
+        // {
+        //     echo "Hello";
+        // }
     }
 
 }
