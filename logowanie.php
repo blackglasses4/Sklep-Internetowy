@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Final project presenting an online store">
     <title></title>
-    <link rel="stylesheet" href="styles-login2.css">
+    <link rel="stylesheet" href="styles-login.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/8f533e6340.js" crossorigin="anonymous"></script>
@@ -19,6 +19,11 @@ session_start();
 <body>
     <div class="container">
         <form action="include/login.inc.php" method="POST" class="form login">
+
+            <?php  
+                if(isset($_GET['error'])) { ?>
+                    <p class="error"><?php echo $_GET['error']; ?></p>
+            <?php } ?>
 
             <div class="form-field">
                 <label for="login-username">

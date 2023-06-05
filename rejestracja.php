@@ -61,7 +61,7 @@ session_start();
             </div>
 
             <div class="form-field">
-                <input type="submit" name="submit-login" value="Zarejestruj się">
+                <input type="submit" name="submit-signup" value="Zarejestruj się">
             </div>
 
         </form>
