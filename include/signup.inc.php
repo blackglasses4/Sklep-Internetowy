@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if(isset($_POST['submit-login']))
+if(isset($_POST['submit-signup']))
 {
-    require 'database.php';
+    require_once 'database.php';
 
     $username =$_POST['username'];
     $email =$_POST['email'];
@@ -12,20 +12,20 @@ if(isset($_POST['submit-login']))
     $password2 =$_POST['password2'];
 
     if(empty($username) || empty($email) || empty($email2) || empty($password) || empty($password2)) {
-        header("Location: ../logowanie.php?error=emptyfields"); //odsyła ponownie
+        header("Location: ../rejestracja.php?error=emptyfields"); //odsyła ponownie
         exit();
     }
     else if(filter_var($email, FILTER_VALIDATE_EMAIL || $email2, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../logowanie.php?error=invalidOneOfEmail"); //odsyła ponownie
+        header("Location: ../rejestracja.php?error=invalidOneOfEmail"); //odsyła ponownie
         exit();
     }
     else if($password != $password2) {
-        header("Location: ../logowanie.php?error=differentpasswords"); //odsyła ponownie
+        header("Location: ../rejestracja.php?error=differentpasswords"); //odsyła ponownie
         exit();
     }
     else if(!preg_match("/^[a-zA-Z0-9]*$/", $username))
     {
-        header("Location: ../logowanie.php?error=invalidUsername"); //odsyła ponownie
+        header("Location: ../rejestracja.php?error=invalidUsername"); //odsyła ponownie
         exit();
     }
     else {
@@ -34,7 +34,7 @@ if(isset($_POST['submit-login']))
 
         if(!mysqli_stmt_prepare($stmt, $sql))
         {
-            header("Location: ../logowanie.php?error=sqlerror"); //odsyła ponownie
+            header("Location: ../rejestracja.php?error=sqlerror"); //odsyła ponownie
             exit();
         }
         else
@@ -43,14 +43,14 @@ if(isset($_POST['submit-login']))
 
             mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
             mysqli_stmt_execute($stmt);
-            header("Location: ../logowanie.php?signup=success");
+            header("Location: ../rejestracja.php?signup=success");
             exit();
         }
     }
 }
 else
 {
-    header("Location: ../logowanie.php");
+    header("Location: ../rejestracja.php");
     exit();
 }
 ?>
