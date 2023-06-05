@@ -8,6 +8,14 @@
     text-decoration: none;
 }
 
+.error p{
+    background: #8f0b0b;
+    color: #17cc2f;
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
 
 header {
     position: absolute;

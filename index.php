@@ -10,7 +10,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Final project presenting an online store">
   <title></title>
-  <link rel="stylesheet" href="styles-menu2.css">
+  <link rel="stylesheet" href="styles-menu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -29,7 +29,7 @@ session_start();
     <h1 class="company-name">Nazwa Firmy</h1>
 
     <ul class="menu">
-      <li><a href="./index.html" class="active">menu</a></li>
+      <li><a href="./index.php" class="active">menu</a></li>
       <li><a href="#sklep">sklep</a></li>
       <li><a href="#kontakt">kontakt</a></li>
     </ul>
@@ -42,13 +42,14 @@ session_start();
     </div>
   </header class="sticky">
   <main>
+
       <section class="main-home">
         <div class="main-text">
           <h5>Winter Collection</h5>
           <h1>New Winter <br> Collection </h1>
           <p>There's Nothing like Trend</p>
 
-          <a href="#" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+          <a href="./logowanie.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
         </div>
 
         <div class="down-arrow">
@@ -57,9 +58,14 @@ session_start();
       </section>
       
       <!-- trending-product-section -->
-      <section class="trending-product" id="trending" aria-labelledby="sklep">
+      <section id="sklep" class="trending-product" id="trending" aria-labelledby="sklep">
           <div class="center-text">
-            <h2 id="sklep"> Our Trending <span>Products</span></h2>
+            <?php  
+                if(isset($_GET['login']))
+                { ?>
+                    <p class="error"><?php echo "Zalogowałeś się !"; ?></p>
+            <?php } ?>
+            <h2> Our Trending <span>Products</span></h2>
           </div>
 
           <div class="products">
