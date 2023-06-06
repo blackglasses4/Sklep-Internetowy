@@ -12,20 +12,20 @@ if(isset($_POST['submit-signup']))
     $password2 =$_POST['password2'];
 
     if(empty($username) || empty($email) || empty($email2) || empty($password) || empty($password2)) {
-        header("Location: ../rejestracja.php?error=emptyfields"); //odsyła ponownie
+        header("Location: ../signup.php?error=emptyfields"); //odsyła ponownie
         exit();
     }
     else if(filter_var($email, FILTER_VALIDATE_EMAIL || $email2, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../rejestracja.php?error=invalidOneOfEmail"); //odsyła ponownie
+        header("Location: ../signup.php?error=invalidOneOfEmail"); //odsyła ponownie
         exit();
     }
     else if($password != $password2) {
-        header("Location: ../rejestracja.php?error=differentpasswords"); //odsyła ponownie
+        header("Location: ../signup.php?error=differentpasswords"); //odsyła ponownie
         exit();
     }
     else if(!preg_match("/^[a-zA-Z0-9]*$/", $username))
     {
-        header("Location: ../rejestracja.php?error=invalidUsername"); //odsyła ponownie
+        header("Location: ../signup.php?error=invalidUsername"); //odsyła ponownie
         exit();
     }
     else {
@@ -34,7 +34,7 @@ if(isset($_POST['submit-signup']))
 
         if(!mysqli_stmt_prepare($stmt, $sql))
         {
-            header("Location: ../rejestracja.php?error=sqlerror"); //odsyła ponownie
+            header("Location: ../signup.php?error=sqlerror"); //odsyła ponownie
             exit();
         }
         else

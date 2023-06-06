@@ -66,7 +66,7 @@ session_start();
 
         </form>
 
-        <p class="text-center">Jesteś już zalogowany? <a href="./logowanie.php">Zaloguj się teraz!</a> <svg
+        <p class="text-center">Jesteś już zalogowany? <a href="./login.php">Zaloguj się teraz!</a> <svg
                 class="icon">
                 <use xlink:href="#icon-arrow-right"></use>
             </svg></p>

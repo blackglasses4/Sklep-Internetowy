@@ -18,12 +18,12 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
     if(empty($email)) 
     {
-        header("Location: ../logowanie.php?error=Empty Email"); //odsyła ponownie
+        header("Location: ../login.php?error=Empty Email"); //odsyła ponownie
         exit();
     }
     else if(empty($password))
     {
-        header("Location: ../logowanie.php?error=Empty Password"); //odsyła ponownie
+        header("Location: ../login.php?error=Empty Password"); //odsyła ponownie
         exit();
     }
     else
@@ -37,7 +37,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
         if(!$prepare)
         {
-            header("Location: ../logowanie.php?error=Sql Error"); //odsyła ponownie
+            header("Location: ../login.php?error=Sql Error"); //odsyła ponownie
             exit();
         }
         else
@@ -59,13 +59,13 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 }
                 else
                 {
-                    header("Location: ../logowanie.php?error=Wrong Password");
+                    header("Location: ../login.php?error=Wrong Password");
                     exit();
                 }
             }
             else
             {
-                header("Location: ../logowanie.php?error=No User");
+                header("Location: ../login.php?error=No User");
                 exit();
             }
         }

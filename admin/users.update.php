@@ -18,9 +18,10 @@ session_start();
 </head>
 
 <body>
-    <h1>Witaj Administratorze!</h1>
+    
+    <h1>Zaaktualizuj dane użytkownika</h1>
     <div class="container">
-        <form action="include/user.inc.signup.php" method="POST" class="form login">
+        <form action="include/users.inc.update.php" method="POST" class="form login">
 
             <?php  
                 if(isset($_GET['error'])) { ?>
@@ -35,16 +36,11 @@ session_start();
 
             <div class="form-field">
 
-                <span class="schowany">Podaj email</span></label>
+                <span class="schowany">Email</span></label>
                 <input autocomplete="email" id="login-email" type="email" name="email" class="form-input"
                     placeholder="Email" required>
             </div>
 
-            <div class="form-field">
-                <span class="schowany">Powtórz email</span></label>
-                <input autocomplete="email" id="login-email" type="email" name="email2" class="form-input"
-                    placeholder="Powtórz email" required>
-            </div>
             <div class="form-field">
                     </svg><span class="schowany">Hasło</span></label>
                 <input id="login-password" type="password" name="password" class="form-input" placeholder="Hasło"
@@ -52,13 +48,13 @@ session_start();
             </div>
 
             <div class="form-field">
-                    </svg><span class="schowany">Powtórz hasło</span></label>
+                    </svg><span class="schowany">Rola</span></label>
                 <input id="login-password" type="password" name="password2" class="form-input"
-                    placeholder="Powtórz hasło" required>
+                    placeholder="Rola">
             </div>
 
             <div class="form-field">
-                <input type="submit" name="submit-signup-admin" value="Zarejestruj nowego użytkownika">
+                <input type="submit" name="submit-update-admin" value="Zaaktualizuj dane użytkownika">
             </div>
         </form>
 
@@ -66,6 +62,7 @@ session_start();
                 class="icon">
                 <use xlink:href="#icon-arrow-right"></use>
             </svg></p>
+
     </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" class="icons">
