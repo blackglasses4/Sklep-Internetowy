@@ -53,7 +53,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
                 if(password_verify($password, $hashedPwd))
                 {
-                    setcookie("username", $username);
+                    setcookie("username", $username); //TODO!
                     header("Location: ../index.php?login=Success#sklep");
                     exit();
                 }
@@ -71,10 +71,5 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         }
     }
 
-}
-else
-{
-    header("Location: index.php");
-    exit();
 }
 ?>

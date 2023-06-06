@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
 
@@ -10,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Final project presenting an online store">
     <title></title>
-    <link rel="stylesheet" href="styles-login2.css">
+    <link rel="stylesheet" href="styles-admin-signup.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/8f533e6340.js" crossorigin="anonymous"></script>
@@ -19,7 +20,7 @@ session_start();
 <body>
     <h1>Witaj Administratorze!</h1>
     <div class="container">
-        <form action="include/user.inc.ad.php" method="POST" class="form login">
+        <form action="include/user.inc.signup.php" method="POST" class="form login">
 
             <?php  
                 if(isset($_GET['error'])) { ?>
@@ -57,11 +58,11 @@ session_start();
             </div>
 
             <div class="form-field">
-                <input type="submit" name="submit-signup" value="Zarejestruj nowego użytkownika">
+                <input type="submit" name="submit-signup-admin" value="Zarejestruj nowego użytkownika">
             </div>
         </form>
 
-        <p class="text-center"><a href="./logowanie.php">Zobacz resztę użytkowników</a> <svg
+        <p class="text-center"><a href="include/users.crud.php">Zobacz resztę użytkowników</a> <svg
                 class="icon">
                 <use xlink:href="#icon-arrow-right"></use>
             </svg></p>

@@ -48,9 +48,4 @@ if(isset($_POST['submit-signup']))
         }
     }
 }
-else
-{
-    header("Location: ../index.php");
-    exit();
-}
 ?>
