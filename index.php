@@ -10,7 +10,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Final project presenting an online store">
   <title></title>
-  <link rel="stylesheet" href="styles-menu.css">
+  <link rel="stylesheet" href="styles-menu2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -21,7 +21,7 @@ session_start();
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <script src="script.js"></script>
+  <link src="script.js"></link>
 </head>
 
 <body>
@@ -36,7 +36,7 @@ session_start();
 
     <div class="login-icon">
       <a href="./login.php"><i class="ri-user-fill"></i></a>
-      <a href="./logout.php"><i class="ri-user-unfollow-fill"></i></a>
+      <a href="./logout.php?logout=<?php echo $_SESSION["username"]; ?>" onclick="return confirm('Jesteś pewien, że chcesz się wylogować?');" class="delete-btn"><i class="ri-user-unfollow-fill"></i></a>
       <a href="#"><i class='bx bxs-cart'></i></a>
 
       <div class="bx bx-menu" id="menu-icon"></div>
@@ -97,6 +97,7 @@ session_start();
               <div class="price">
                 <h4>Half Running Set</h4>
                 <p>$99 - $129</p>
+                <button>Dodaj do koszyka</button>
               </div>
             </div>
             <!-- ----- -->
@@ -120,6 +121,7 @@ session_start();
               <div class="price">
                 <h4>Half Running Set</h4>
                 <p>$99 - $129</p>
+                <button>Dodaj do koszyka</button>
               </div>
             </div>
             <!-- ----- -->
@@ -141,6 +143,7 @@ session_start();
               <div class="price">
                 <h4>Half Running Set</h4>
                 <p>$99 - $129</p>
+                <button>Dodaj do koszyka</button>
               </div>
             </div>
             <!-- ----- -->
@@ -164,6 +167,7 @@ session_start();
               <div class="price">
                 <h4>Half Running Set</h4>
                 <p>$99 - $129</p>
+                <button>Dodaj do koszyka</button>
               </div>
             </div>
             <!-- ----- -->
@@ -185,6 +189,7 @@ session_start();
               <div class="price">
                 <h4>Half Running Set</h4>
                 <p>$99 - $129</p>
+                <button>Dodaj do koszyka</button>
               </div>
             </div>
             <!-- ----- -->
@@ -208,6 +213,7 @@ session_start();
               <div class="price">
                 <h4>Half Running Set</h4>
                 <p>$99 - $129</p>
+                <button>Dodaj do koszyka</button>
               </div>
             </div>
             <!-- ----- -->
@@ -231,6 +237,7 @@ session_start();
               <div class="price">
                 <h4>Half Running Set</h4>
                 <p>$99 - $129</p>
+                <button>Dodaj do koszyka</button>
               </div>
             </div>
             <!-- ----- -->
@@ -254,6 +261,7 @@ session_start();
               <div class="price">
                 <h4>Half Running Set</h4>
                 <p>$99 - $129</p>
+                <button>Dodaj do koszyka</button>
               </div>
             </div>
             <!-- ----- -->
@@ -285,59 +293,6 @@ session_start();
       <div class="end-text">
         <p>©Copyright 2023 by nobody. All rights reversed.</p>
       </div>
-
-    <!-- <div class="slider">
-                <div class="slides">
-
-                    <input type="radio" name="radio-btn" id="radio1" checked>
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-
-                    <div class="slide first">
-
-                        <img src="picture/1.jpg" alt="ostre danie">
-                    </div>
-                    <div class="slide two">
-
-                        <img src="picture/2.jpg" alt="trzy napoje">
-                    </div>
-                    <div class="slide three">
-
-                        <img src="picture/3.jpg" alt="pizza">
-                    </div>
-                    <div class="slide four">
-
-                        <img src="picture/4.jpg" alt="Kawa ze śmietaną">
-                    </div>
-                    
-                    <div class="navigation-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-                    </div>
-
-                    <div class="navigation-manual">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                    </div>
-                </div>
-            </div> -->
-    <!-- <div class="main">
-      <section role="region" aria-labelledby="kupony">
-        <h2 id="kupony">kupony</h2>
-      </section>
-      <section role="region" aria-labelledby="kontakt">
-        <h2 id="kontakt">kontakt</h2>
-      </section>
-    </div> -->
   </main>
-  <!-- <footer>
-    ©Copyright 2023 by nobody. All rights reversed.
-  </footer> -->
 </body>
-
 </html>

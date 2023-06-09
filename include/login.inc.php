@@ -48,11 +48,20 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                     $_SESSION["email"] = $_POST['email'];
                     $_SESSION["password"] = $_POST['password'];
                     $_SESSION["username"] = $row["username"];
+                    $_SESSION["id_role"] = $row["id_role"];
 
                     if(isset($_SESSION["email"]))
                     {
-                        header("Location: ../index.php?login=YouAreLogin#sklep");
-                        exit();
+                        if($_SESSION["id_role"] == 1)
+                        {
+                            header("Location: ../index.php?login=You are login ".$_SESSION["username"]."#sklep");
+                            exit();
+                        }
+                        else if($_SESSION["id_role"] == 3)
+                        {
+                            header("Location: ../admin/include/users.crud.php?login=You are login " .$_SESSION["username"]);
+                            exit();
+                        }
                     }
                 }
                 else

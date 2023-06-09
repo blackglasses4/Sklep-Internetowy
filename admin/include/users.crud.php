@@ -27,30 +27,29 @@ session_start();
             </thead>
             <tbody>
 
-                <?php 
-                    require_once('database.php');
+                <?php
+                require_once('database.php');
 
-                    $sql = "SELECT * FROM users";
-                    $result = mysqli_query($servername, $sql);
+                $sql = "SELECT * FROM users";
+                $result = mysqli_query($servername, $sql);
 
-                    while($row = mysqli_fetch_assoc($result))
-                    {
-                        $idUsers = $row['idUsers'];
-                        $username = $row['username'];
-                        $email = $row['email'];
-                        $rola = $row['rola'];
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $idUsers = $row['idUsers'];
+                    $username = $row['username'];
+                    $email = $row['email'];
+                    $rola = $row['id_role'];
 
-                        echo '<tr>
-                        <th scope="row">'.$idUsers.'</th>
-                        <td>'.$username.'</td>
-                        <td>'.$email.'</td>
-                        <td>'.$rola.'</td>
+                    echo '<tr>
+                        <th scope="row">' . $idUsers . '</th>
+                        <td>' . $username . '</td>
+                        <td>' . $email . '</td>
+                        <td>' . $rola . '</td>
                             </tr>
                         <td>
-                            <button class="btn btn-primary"><a class="text-light" href="../users.update.php?updateid='.$idUsers.'">Zaaktualizuj</a></button>
-                            <button class="btn btn-danger"><a class="text-light" href="../users.delete.php?deleteid='.$idUsers.'">Usuń</a></button>
+                            <button class="btn btn-primary"><a class="text-light" href="../users.update.php?updateid=' . $idUsers . '">Zaaktualizuj</a></button>
+                            <button class="btn btn-danger"><a class="text-light" href="../users.delete.php?deleteid=' . $idUsers . '">Usuń</a></button>
                         </td>';
-                    }
+                }
                 ?>
             </tbody>
         </table>
