@@ -47,8 +47,8 @@ session_start();
                         <td>'.$rola.'</td>
                             </tr>
                         <td>
-                            <button class="btn btn-primary"><a class="text-light" href="../users.update.php?update='.$idUsers.'">Zaaktualizuj</a></button>
-                            <button class="btn btn-danger"><a class="text-light" href="../users.delete.php">Usuń</a></button>
+                            <button class="btn btn-primary"><a class="text-light" href="../users.update.php?updateid='.$idUsers.'">Zaaktualizuj</a></button>
+                            <button class="btn btn-danger"><a class="text-light" href="../users.delete.php?deleteid='.$idUsers.'">Usuń</a></button>
                         </td>';
                     }
                 ?>

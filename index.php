@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
 session_start();
-?> -->
+?> 
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
 
@@ -35,7 +35,8 @@ session_start();
     </ul>
 
     <div class="login-icon">
-      <a href="./logowanie.php"><i class='bx bxs-user'></i></a>
+      <a href="./login.php"><i class="ri-user-fill"></i></a>
+      <a href="./logout.php"><i class="ri-user-unfollow-fill"></i></a>
       <a href="#"><i class='bx bxs-cart'></i></a>
 
       <div class="bx bx-menu" id="menu-icon"></div>
@@ -49,7 +50,7 @@ session_start();
           <h1>New Winter <br> Collection </h1>
           <p>There's Nothing like Trend</p>
 
-          <a href="./logowanie.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+          <a href="./login.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
         </div>
 
         <div class="down-arrow">
@@ -60,11 +61,18 @@ session_start();
       <!-- trending-product-section -->
       <section id="sklep" class="trending-product" id="trending" aria-labelledby="sklep">
           <div class="center-text">
-            <?php  
-                if(isset($_GET['login']))
-                { ?>
-                    <p class="error"><?php echo "Zalogowałeś się !"; ?></p>
-            <?php } ?>
+            
+            <?php 
+            if($_SESSION["username"])
+            {
+             ?> <h2>Welcome <span><?php echo $_SESSION["username"];?>!</span></h2> <?php
+            }
+            else
+            {
+              header("Location: ./login.php");
+            }
+            ?>
+
             <h2> Our Trending <span>Products</span></h2>
           </div>
 

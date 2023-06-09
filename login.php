@@ -42,12 +42,12 @@ session_start();
             </div>
 
             <div class="form-field">
-                <input type="submit" value="Zaloguj się">
+                <input type="submit" name="login" value="Zaloguj się">
             </div>
 
         </form>
 
-        <p class="text-center">Nie masz jeszcze konta? <a href="./rejestracja.php">Zarejestruj się teraz!</a> <svg class="icon">
+        <p class="text-center">Nie masz jeszcze konta? <a href="./signup.php">Zarejestruj się teraz!</a> <svg class="icon">
                 <use xlink:href="#icon-arrow-right"></use>
             </svg></p>
 

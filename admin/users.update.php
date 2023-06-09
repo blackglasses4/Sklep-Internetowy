@@ -1,5 +1,48 @@
 <?php
 session_start();
+
+include_once './include/database.php';
+
+$id = $_GET['updateid'];
+
+if (isset($_POST['submit'])) {
+
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if (isset($_GET['updateid'])) {
+
+        $idUsers = $_GET['updateid'];
+
+        if (empty($username) || empty($email) || empty($password)) {
+            header("Location: ../users.update.php?error=emptyfields"); //odsyła ponownie
+            exit();
+        } else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+            header("Location: ../users.update.php?error=invalidUsername"); //odsyła ponownie
+            exit();
+        }
+        else
+        {
+            $sql = "UPDATE `users` SET `idUsers` = $id, `username` = $username, `email` = $email,`pass` = $password WHERE `users`.`idUsers` = $idUsers ";
+
+            $result = mysqli_query($servername, $sql);
+
+            if (!$result) {
+                header("Location: ../users.update.php?error=sqlerror"); //odsyła ponownie
+                exit();
+            } else {
+                $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
+
+                mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $hashedPwd, $rola);
+                mysqli_stmt_execute($stmt);
+                header("Location: ../include/users.crud.php?updateid='.$idUsers.'");
+                exit();
+            }
+        }
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +64,7 @@ session_start();
     
     <h1>Zaaktualizuj dane użytkownika</h1>
     <div class="container">
-        <form action="include/users.inc.update.php" method="POST" class="form login">
+        <form method="POST" class="form login">
 
             <?php  
                 if(isset($_GET['error'])) { ?>
@@ -36,7 +79,7 @@ session_start();
 
             <div class="form-field">
 
-                <span class="schowany">Email</span></label>
+                <span class="schowany">Podaj email</span></label>
                 <input autocomplete="email" id="login-email" type="email" name="email" class="form-input"
                     placeholder="Email" required>
             </div>
@@ -54,7 +97,7 @@ session_start();
             </div>
 
             <div class="form-field">
-                <input type="submit" name="submit-update-admin" value="Zaaktualizuj dane użytkownika">
+                <input type="submit" name="submit" value="Zaaktualizuj dane użytkownika">
             </div>
         </form>
 

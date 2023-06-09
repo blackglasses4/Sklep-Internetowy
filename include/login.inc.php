@@ -5,16 +5,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
     include_once('database.php');
 
-    function validate($data) {
-        $data = trim($data); //usuwa z początku i końca tekstu białe, puste znaki. 
-        $data = stripcslashes($data); //usuwa \ z ciągu znaków.
-        $data = htmlspecialchars($data); //zamienia znaki specjalne <>'"& na bezpieczne odpowiedniki.
-        return $data;
-    }
-
-    $email = validate($_POST['email']);
-    $password = validate($_POST['password']);
-    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
     if(empty($email)) 
     {
@@ -53,9 +45,15 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
                 if(password_verify($password, $hashedPwd))
                 {
-                    setcookie("username", $username); //TODO!
-                    header("Location: ../index.php?login=Success#sklep");
-                    exit();
+                    $_SESSION["email"] = $_POST['email'];
+                    $_SESSION["password"] = $_POST['password'];
+                    $_SESSION["username"] = $row["username"];
+
+                    if(isset($_SESSION["email"]))
+                    {
+                        header("Location: ../index.php?login=YouAreLogin#sklep");
+                        exit();
+                    }
                 }
                 else
                 {
