@@ -1,0 +1,164 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 85vh;
+    display: flex;
+    background-color: burlywood;
+    padding: 150px;
+    align-items: center;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    padding: 1em;
+    position: absolute;
+    left: 0;
+}
+
+header {
+    z-index: 100;
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    background-color: #1b1b32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main {
+    z-index: 99;
+}
+
+footer {
+    z-index: 98;
+}
+
+nav {
+    width: 100%;
+    margin-left: 5%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    text-transform: uppercase;
+}
+
+h1 {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    color: white;
+    font-size: 80px;
+    overflow: hidden;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.slider {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    height: 650px;
+    border-radius: 10px;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 650px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    height: 650px;
+}
+
+.slide img {
+    object-fit: cover;
+    width: 1300px;
+    height: 650px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 45%;
+    margin-left: 20%;
+    margin-top: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: white;
+}
+
+#radio1:checked ~ .slide {
+    transform: translateX(0%);
+    transition: 2s;
+}
+#radio2:checked ~ .slide {
+    transform: translateX(-100%);
+    transition: 2s;
+}
+#radio3:checked ~ .slide {
+    transform: translateX(-200%);
+    transition: 2s;
+}
+#radio4:checked ~ .slide {
+    transform: translateX(-300%);
+    transition: 2s;
+}
+
+.footer {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
