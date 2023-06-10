@@ -29,36 +29,42 @@ session_start();
             </div>
 
             <div class="form-field">
-                <label for="login-email">
-                    <span class="ikona"><i class="fa-solid fa-envelope icon"></i></span>
-                <span class="schowany">Podaj email</span></label>
-                <input autocomplete="email" id="login-email" type="email" name="email" class="form-input"
-                    placeholder="Email" required>
-            </div>
+    <label for="login-email">
+        <span class="ikona"><i class="fa-solid fa-envelope icon"></i></span>
+        <span class="schowany">Podaj email</span>
+    </label>
+    <input autocomplete="email" id="login-email" type="email" name="email" class="form-input" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required>
+</div>
 
-            <div class="form-field">
-                <label for="login-email">
-                <span class="ikona"><i class="fa-solid fa-envelope icon"></i></span>
-                <span class="schowany">Powtórz email</span></label>
-                <input autocomplete="email" id="login-email" type="email" name="email2" class="form-input"
-                    placeholder="Powtórz email" required>
-            </div>
+<div class="form-field">
+    <label for="login-email">
+        <span class="ikona"><i class="fa-solid fa-envelope icon"></i></span>
+        <span class="schowany">Powtórz email</span>
+    </label>
+    <input autocomplete="email" id="login-email" type="email" name="email2" class="form-input" placeholder="Powtórz email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required>
+</div>
 
-            <div class="form-field">
-                <label for="login-password"><svg class="icon">
-                        <use xlink:href="#icon-lock"></use>
-                    </svg><span class="schowany">Hasło</span></label>
-                <input id="login-password" type="password" name="password" class="form-input" placeholder="Hasło"
-                    required>
-            </div>
+<div class="form-field">
+    <label for="login-password">
+        <svg class="icon">
+            <use xlink:href="#icon-lock"></use>
+        </svg>
+        <span class="schowany">Hasło</span>
+    </label>
+    <input id="login-password" type="password" name="password" class="form-input" placeholder="Hasło" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$" title="Hasło musi zawierać co najmniej 8 znaków, jedną cyfrę, jedną małą literę, jedną wielką literę i jeden znak specjalny" required>
+  
+</div>
 
-            <div class="form-field">
-                <label for="login-password"><svg class="icon">
-                        <use xlink:href="#icon-lock"></use>
-                    </svg><span class="schowany">Powtórz hasło</span></label>
-                <input id="login-password" type="password" name="password2" class="form-input"
-                    placeholder="Powtórz hasło" required>
-            </div>
+<div class="form-field">
+    <label for="login-password">
+        <svg class="icon">
+            <use xlink:href="#icon-lock"></use>
+        </svg>
+        <span class="schowany">Powtórz hasło</span>
+    </label>
+    <input id="login-password" type="password" name="password2" class="form-input" placeholder="Powtórz hasło" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$" required>
+</div>
+        
 
             <div class="form-field">
                 <input type="submit" name="submit-signup" value="Zarejestruj się">
