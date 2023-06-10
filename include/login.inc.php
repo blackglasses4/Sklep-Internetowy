@@ -57,6 +57,11 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                             header("Location: ../index.php?login=You are login ".$_SESSION["username"]."#sklep");
                             exit();
                         }
+                        else if($_SESSION["id_role"] == 2)
+                        {
+                            header("Location: ../admin/include/users.crud.php?login=You are login " .$_SESSION["username"]);
+                            exit(); //link do zarządzania produktami
+                        }
                         else if($_SESSION["id_role"] == 3)
                         {
                             header("Location: ../admin/include/users.crud.php?login=You are login " .$_SESSION["username"]);

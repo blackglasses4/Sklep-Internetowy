@@ -35,7 +35,15 @@ session_start();
     </ul>
 
     <div class="login-icon">
-      <a href="./login.php"><i class="ri-user-fill"></i></a>
+    <?php 
+    if($_SESSION["username"])
+    {
+    }
+    else
+    {
+      ?><a href="./login.php"><i class="ri-user-fill"></i></a><?php
+    }
+    ?>
       <a href="./logout.php?logout=<?php echo $_SESSION["username"]; ?>" onclick="return confirm('Jesteś pewien, że chcesz się wylogować?');" class="delete-btn"><i class="ri-user-unfollow-fill"></i></a>
       <a href="#"><i class='bx bxs-cart'></i></a>
 
