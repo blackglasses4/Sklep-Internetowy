@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url(./picture/ubrania/12.jpg);
+    background-image: url(./picture/12.jpg);
     background-size: cover;
 }
 
@@ -412,7 +412,6 @@ heart-icon {
 .add_to_number:focus {
     outline-color: rgb(207, 218, 223);
     background: rgb(165, 176, 180);
-    box-shadow: inset 20px 20px 60px rgb(118, 188, 231),
-           inset -20px -20px 60px rgb(0, 255, 0);
+    box-shadow: inset 20px 20px 60px rgb(118, 188, 231);
     transition: 0.3s;
 }
