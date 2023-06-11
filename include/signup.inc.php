@@ -11,6 +11,9 @@ if(isset($_POST['submit-signup']))
     $password =$_POST['password'];
     $password2 =$_POST['password2'];
 
+    $sql = "SELECT * FROM users WHERE username = '$username'";
+    $result = $servername->query($sql);
+
     if(empty($username) || empty($email) || empty($email2) || empty($password) || empty($password2)) {
         header("Location: ../signup.php?error=emptyfields"); //odsyła ponownie
         exit();
@@ -26,6 +29,11 @@ if(isset($_POST['submit-signup']))
     else if(!preg_match("/^[a-zA-Z0-9]*$/", $username))
     {
         header("Location: ../signup.php?error=invalidUsername"); //odsyła ponownie
+        exit();
+    }
+    else if($result->num_rows > 0)
+    {
+        header("Location: ../signup.php?error=SuchUsernameAlreadyExists"); //odsyła ponownie
         exit();
     }
     else {
