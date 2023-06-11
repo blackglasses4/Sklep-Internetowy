@@ -86,7 +86,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Dodawanie i usuwanie produktów</title>
-    <link rel="stylesheet" href="styl-produkty2.css">
+    <link rel="stylesheet" href="styl_produkty.css">
     <script src="../script.js"></script>
 </head>
 <body>
