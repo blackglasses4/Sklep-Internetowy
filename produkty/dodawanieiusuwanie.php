@@ -112,7 +112,7 @@ $result = $conn->query($sql);
 
         </div>
         <div>
-            <input type="submit" class="add-button" name="add_product" value="Dodaj produkt" >
+            <input type="submit" class="add-button-product" name="add_product" value="Dodaj produkt" >
         </div>
     </form>
 </div>
