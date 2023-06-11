@@ -9,8 +9,9 @@ if(isset($_POST['submit-order']))
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
+    $adres = $_POST['adres'];
 
-    if(empty($firstname) || empty($lastname) || empty($email) || empty($phone)) {
+    if(empty($firstname) || empty($lastname) || empty($email) || empty($phone) || empty($adres)) {
         header("Location: ../zamówienie.php?error=emptyfields");
         exit();
     }
@@ -23,7 +24,7 @@ if(isset($_POST['submit-order']))
         exit();
     }
     else {
-        $sql = "INSERT INTO orders (firstname, lastname, email, phone) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO orders (firstname, lastname, email, phone, adres) VALUES (?,?,?,?,?)";
         $stmt = mysqli_stmt_init($servername);
 
         if(!mysqli_stmt_prepare($stmt, $sql))
@@ -33,7 +34,7 @@ if(isset($_POST['submit-order']))
         }
         else
         {
-            mysqli_stmt_bind_param($stmt, "ssss", $firstname, $lastname, $email, $phone);
+            mysqli_stmt_bind_param($stmt, "sssss", $firstname, $lastname, $email, $phone, $adres);
             mysqli_stmt_execute($stmt);
             header("Location: ../zamówienie.php?order=success");
             exit();
