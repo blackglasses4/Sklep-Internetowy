@@ -45,8 +45,11 @@ session_start();
         onclick="return confirm('Jesteś pewien, że chcesz się wylogować?');" class="delete-btn"><i
           class="ri-user-unfollow-fill"></i></a>
       <a href="#"><i class='bx bxs-cart'></i></a>
-
-      <div class="bx bx-menu" id="menu-icon"></div>
+        <?php
+        if (isset($_SESSION['id_role']) && $_SESSION['id_role'] != 1) {
+            echo '<a href="./produkty/dodawanieiusuwanie.php"><i class="bx bx-menu" id="menu-icon"></i></a>';
+        }
+        ?>
     </div>
   </header class="sticky">
   <main>
