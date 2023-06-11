@@ -1,5 +1,3 @@
-/* CSS dla strony dodawanieiusuwanie.php */
-
 body {
     background-image: url(../picture/7.jpg); /* Zmień '7' na właściwą ścieżkę do pliku */
     background-repeat: no-repeat;
@@ -35,6 +33,7 @@ h2 {
     border-radius: 0.25rem;
     transition: border-color 0.3s ease;
     background-color: #3b4148; /* Jasno szary kolor tła */
+    color: #ffffff; /* Biały kolor napisów */
 }
 
 .form-field input[type="text"]:focus,
@@ -61,6 +60,7 @@ input[type="file"] {
     border: 0px solid #ff0000;
     border-radius: 4px;
     transition: border-color 0.3s ease;
+    color: #ffffff; /* Biały kolor napisów */
 }
 
 input[type="text"]:focus,
@@ -201,7 +201,7 @@ input[type="file"]:focus {
 }
 
 .return-button i{
-    vertical-align:middle;   
+    vertical-align:middle;
 }
 
 .popup-message .success-message {
@@ -241,4 +241,3 @@ input[type="file"]:focus {
 .hidden-input {
     display: none;
 }
-
