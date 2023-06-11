@@ -46,7 +46,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 if(password_verify($password, $hashedPwd))
                 {
                     $_SESSION["email"] = $_POST['email'];
-                    $_SESSION["password"] = $_POST['password'];
                     $_SESSION["username"] = $row["username"];
                     $_SESSION["id_role"] = $row["id_role"];
 

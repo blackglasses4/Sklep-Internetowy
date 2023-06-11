@@ -83,7 +83,7 @@ session_start();
     <section class="contact" aria-labelledby="kontakt">
         <div class="contact-info">
           <div class="first-info">
-            <h1 id="kontakt">Nazwa Firmy</h1>
+            <h1 id="kontakt">ŁachmanSport</h1>
             
             <div class="social-icon">
               <a href="#"><i class='bx bxl-facebook'></i></a>

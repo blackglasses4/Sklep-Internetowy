@@ -62,10 +62,6 @@ session_start();
 
         <a href="./sklep.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
       </div>
-
-      <div class="down-arrow">
-        <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
-      </div>
     </section>
 
     <!-- trending-product-section -->
@@ -78,10 +74,10 @@ session_start();
             <h1>Discounts on<br> New shoes</h1>
             <p>Don't miss this </p>
 
-            <a href="./login.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+            <a href="./sklep.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
           </div>
           <div class="down-arrow">
-            <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+            <a href="#sklep" class="down"><i class='bx bx-down-arrow-alt'></i></a>
           </div>
         </section>
     </section>
@@ -91,7 +87,7 @@ session_start();
     <section class="contact" aria-labelledby="kontakt">
       <div class="contact-info">
         <div class="first-info">
-          <h1 id="kontakt">Nazwa Firmy</h1>
+          <h1 id="kontakt">ŁachmanSport</h1>
 
           <div class="social-icon">
             <a href="#"><i class='bx bxl-facebook'></i></a>

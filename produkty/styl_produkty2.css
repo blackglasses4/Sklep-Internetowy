@@ -23,6 +23,10 @@ h2 {
     color: #ffffff;
 }
 
+.strona {
+    margin-left: -100%;
+}
+
 .form-field input[type="text"],
 .form-field input[type="number"] {
     margin: 10px;
@@ -174,6 +178,10 @@ input[type="file"]:focus {
     background-color: rgba(0, 0, 0, 0);
     color: #fff;
     border-radius: 4px;
+}
+
+.btn a{
+    margin-left: 4%;
 }
 
 .popup-message .success-message {

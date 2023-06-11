@@ -2,13 +2,13 @@
 - strona internetorwa 
     - wygląd :ZROBIONE
         - dodanie zdjęć ZROBIONE
-        - zmiana nazw do produktów oraz nazwa firmy [Morfeusz]
+        - zmiana nazw do produktów oraz nazwa firmy ZROBIONE
         
 - logowanie: 
         - domyślne uprawnienia-klient : ZROBIONE
         - sesja: ZROBIONE
         - usunięcie możliwości ponownego logowania przed wylogowaniem się: ZROBIONE
-        - shop now przeniesienie do koszyka: ada
+        - shop now przeniesienie do koszyka: ZROBIONE
 
 - rejestracja:ZROBIONE
 
@@ -17,7 +17,7 @@
 - sklep (klient)
         -dodanie produktu, ilość produktu 
         -usunięcie go 
-        -przejście do sklepu przez przycisk na header: ada
+        -przejście do sklepu przez przycisk na header: ZROBIONE
 
 - administracja
 

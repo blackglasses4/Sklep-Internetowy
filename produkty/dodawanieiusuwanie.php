@@ -1,6 +1,6 @@
 <?php
 global $PATH_PREFIX;
-require_once "../config.php";
+require_once "./config.php";
 
 // Połączenie z bazą danych
 $servername = "localhost";
@@ -87,11 +87,13 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Dodawanie i usuwanie produktów</title>
-    <link rel="stylesheet" href="styl_produkty.css">
+    <link rel="stylesheet" href="styl_produkty2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <script src="../script.js"></script>
 </head>
-<body>
+<body>  
 <div class="container">
+    <a class="btn btn-primary strona" href="../index.php">Strona główna</a>
     <h2>Dodawanie produktu</h2>
     <form method="post" enctype="multipart/form-data">
         <div class="form-field">
