@@ -8,7 +8,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trending Products</title>
-  <link rel="stylesheet" href="styles-menu2.css">
+  <link rel="stylesheet" href="styles-sklep.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -24,7 +24,7 @@ session_start();
 
 <body>
   <header>
-    <h1 class="company-name">Nazwa Firmy</h1>
+    <h1 class="company-name">ŁachmanSport</h1>
 
     <ul class="menu">
       <li><a href="./index.php" class="active">menu</a></li>
@@ -33,7 +33,6 @@ session_start();
     </ul>
 
     <div class="login-icon">
-      <a href="./login.php"><i class="ri-user-fill"></i></a>
       <a href="./logout.php?logout=<?php echo $_SESSION["username"]; ?>" onclick="return confirm('Jesteś pewien, że chcesz się wylogować?');" class="delete-btn"><i class="ri-user-unfollow-fill"></i></a>
       <a href="#"><i class='bx bxs-cart'></i></a>
 

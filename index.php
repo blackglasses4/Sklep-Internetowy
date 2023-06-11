@@ -27,11 +27,11 @@ session_start();
 
 <body>
   <header>
-    <h1 class="company-name">Nazwa Firmy</h1>
+    <h1 class="company-name">ŁachmanSport</h1>
 
     <ul class="menu">
       <li><a href="./index.php" class="active">menu</a></li>
-      <li><a href="#sklep">sklep</a></li>
+      <li><a href="./sklep.php">sklep</a></li>
       <li><a href="#kontakt">kontakt</a></li>
     </ul>
 
@@ -60,7 +60,7 @@ session_start();
         <h1>New Summer <br> Collection </h1>
         <p>There's Nothing like Trend</p>
 
-        <a href="./login.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+        <a href="./sklep.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
       </div>
 
       <div class="down-arrow">
