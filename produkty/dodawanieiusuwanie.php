@@ -35,6 +35,7 @@ if (isset($_POST['add_product'])) {
     move_uploaded_file($_FILES['photo']['tmp_name'], $targetFilePath);
 
     // Dodanie produktu do bazy danych
+    // Dodanie produktu do bazy danych
     $sql = "INSERT INTO products (name, price, photo_id, photo) VALUES ('$name', '$price', 1, '$photo')";
 
     if ($conn->query($sql) === true) {
@@ -84,17 +85,17 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html>
 <head>
-
-    <br><a class="add-photo-button" href="../index.php">Strona główna</a><br>
     <meta charset="UTF-8">
-    <title>Dodawanie i usuwanie produktów</title><br>
-    <br><a class="add-photo-button" href="../admin/include/users.crud.php">Panel Administratora</a>
-    <link rel="stylesheet" href="styl_produkty.css">
+    <title>Dodawanie i usuwanie produktów</title>
+    <link rel="stylesheet" href="styl_produkty2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <script src="../script.js"></script>
 </head>
 <body>
 <div class="container">
+    <a class="btn btn-primary strona" href="../index.php">Strona główna</a>
     <h2>Dodawanie produktu</h2>
+    <a class="btn btn-primary strona" href="../admin/include/users.crud.php">Panel Administratora</a>
     <form method="post" enctype="multipart/form-data">
         <div class="form-field">
             <div class="label-container">
@@ -109,12 +110,12 @@ $result = $conn->query($sql);
             <input type="number" id="price" name="price" step="0.01" class="input-field" required>
         </div>
         <div class="button-container">
-            <input type="file" id="photo" name="photo" accept="image/*" class="hidden-input" onchange="displayFileName()" required>
+            <input type="file" id="photo" name="photo" accept="image/*" class="hidden-input" onchange="displayFileName( )" required>
             <label for="photo" class="add-photo-button">Dodaj zdjęcie</label>
             <span id="file-name"></span>
         </div>
         <div>
-            <input type="submit" class="add-button-product" name="add_product" value="Dodaj produkt">
+            <input type="submit" class="add-button-product" name="add_product" value="Dodaj produkt" >
         </div>
     </form>
 </div>
