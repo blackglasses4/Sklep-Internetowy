@@ -15,7 +15,7 @@ session_start();
 <body>
     <h1>Witaj Administratorze!</h1>
     <button class="btn btn-primary"><a class="text-light" href="../users.add.php">Dodaj użytkownika</a></button><br>
-    <br><button class="btn btn-primary"><a class="text-light" href="../products.crud.php">Zarządzaj produktami</a></button>
+    <br><button class="btn btn-primary"><a class="text-light" href="../produkty/dodawanieiusuwanie.php">Zarządzaj produktami</a></button>
     <div class="container">
         <table class="table">
             <thead>

@@ -1,29 +1,29 @@
 # Rzeczy do zrobienia
 - strona internetorwa 
     - wygląd :ZROBIONE
-        - dodanie zdjęć [Morfeusz]
+        - dodanie zdjęć ZROBIONE
         - zmiana nazw do produktów oraz nazwa firmy [Morfeusz]
         
 - logowanie: 
         - domyślne uprawnienia-klient : ZROBIONE
         - sesja: ZROBIONE
         - usunięcie możliwości ponownego logowania przed wylogowaniem się: ZROBIONE
-        - shop now przeniesienie do koszyka :MIKOŁAJ MUSI ZROBIĆ
+        - shop now przeniesienie do koszyka: ada
 
 - rejestracja:ZROBIONE
 
 - wylogowanie:ZROBIONE
 
-- sklep
-        -dodanie produktu, ilość produktu
-        -usunięcie go
-        -przejście do sklepu przez przycisk na header
+- sklep (klient)
+        -dodanie produktu, ilość produktu 
+        -usunięcie go 
+        -przejście do sklepu przez przycisk na header: ada
 
 - administracja
 
     -dodawanie:ZROBIONE
 
-    -aktualizacja:
+    -aktualizacja:ZROBIONE
 
     -usuwanie:ZROBIONE
 
@@ -39,15 +39,14 @@
 
 - trzy poziomy uprawnień: ZROBIONE
 
-- różne strony się pokazują w zależności od poziomu uprawnień: ZROBIONE prawie, bo 2 uprawnienia na razie ZARAZ DAMY STRONĘ, GDZIE MA PÓJŚĆ MODERATOR I ADMIN DO PRODUKTÓW
+- różne strony się pokazują w zależności od poziomu uprawnień: ZROBIONE prawie, bo 2 uprawnienia na razie ZARAZ DAMY STRONĘ, GDZIE MA PÓJŚĆ MODERATOR I ADMIN DO PRODUKTÓW: ADA!!!!
 
-- zarządzanie użytkownikami w panelu użytkownika (CRUD): 
-ZROBIONE oprócz aktualizacji
+- zarządzanie użytkownikami w panelu użytkownika (CRUD): ZROBIONE
 
-- walidacja danych w formularzach:ZROBIONE
+- walidacja danych w formularzach: ZROBIONE
 
--możliwość zamówienia ?
+-możliwość zamówienia: !!!!
 
--koszyk
+-koszyk: !!!!
 
--dodawanie i usuwanie produktów (moderator i administrator);
+-dodawanie i usuwanie produktów (moderator i administrator): ZROBIONE

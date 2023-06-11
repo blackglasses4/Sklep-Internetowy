@@ -1,5 +1,5 @@
 <?php
-require_once "../config.php";
+require_once "./config.php";
 
 // Połączenie z bazą danych
 $servername = "localhost";
@@ -86,7 +86,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Dodawanie i usuwanie produktów</title>
-    <link rel="stylesheet" href="styl-produkty.css">
+    <link rel="stylesheet" href="styl-produkty2.css">
     <script src="../script.js"></script>
 </head>
 <body>
