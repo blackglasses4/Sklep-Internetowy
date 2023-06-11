@@ -1,4 +1,5 @@
 <?php
+global $PATH_PREFIX;
 require_once "../config.php";
 
 // Połączenie z bazą danych
@@ -106,10 +107,9 @@ $result = $conn->query($sql);
             <input type="number" id="price" name="price" step="0.01" class="input-field" required>
         </div>
         <div class="button-container">
-            <input type="file" id="photo" name="photo" accept="image/*" class="hidden-input" required>
+            <input type="file" id="photo" name="photo" accept="image/*" class="hidden-input" onchange="displayFileName( )" required>
             <label for="photo" class="add-photo-button">Dodaj zdjęcie</label>
             <span id="file-name"></span>
-
         </div>
         <div>
             <input type="submit" class="add-button-product" name="add_product" value="Dodaj produkt" >
@@ -145,3 +145,10 @@ $result = $conn->query($sql);
 </table>
 </body>
 </html>
+<script>
+    function displayFileName() {
+        var fileInput = document.getElementById('photo');
+        var fileNameSpan = document.getElementById('file-name');
+        fileNameSpan.textContent = fileInput.files[0].name;
+    }
+</script>
