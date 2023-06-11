@@ -18,7 +18,6 @@ session_start();
 </head>
 
 <body>
-    <h1>Złóż zamówienie</h1>
     <div class="container">
         <form action="include/zamówienie.inc.php" method="POST" class="form login">
 
@@ -48,6 +47,13 @@ session_start();
                 <span class="ikona"><i class="fa-solid fa-envelope icon"></i></span>
                 <span class="schowany">Telefon</span></label>
                 <input id="order-phone" type="text" name="phone" class="form-input" placeholder="Telefon" required>
+            </div>
+
+            <div class="form-field">
+                <label for="order-adres"><svg class="icon">
+                        <use xlink:href="#icon-user"></use>
+                    </svg><span class="schowany">Adres</span></label>
+                <input id="order-adres" type="text" name="adres" class="form-input" placeholder="Adres" required>
             </div>
 
             <div class="form-field">
