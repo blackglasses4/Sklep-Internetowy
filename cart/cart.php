@@ -134,7 +134,8 @@ if (isset($_GET['remove_from_cart'])) {
 
 <!-- Dodany przycisk powrotu do sklep.php -->
 <div class="return-button-container">
-    <a href="../sklep.php" class="return-button">Powrót do sklepu</a>
+    <a href="../zamówienie.php" class="return-button">Zamów</a><br>
+    <br><a href="../sklep.php" class="return-button">Powrót do sklepu</a>
 </div>
 
 </body>
