@@ -27,13 +27,11 @@
 
     -usuwanie:ZROBIONE
 
-- moderator produktów
+- moderator produktów: ZROBIONE
 
-    -dodawanie
+    -dodawanie : ZROBIONE
 
-    -usuwanie
-
-    -aktualizacja
+    -usuwanie : ZROBIONE
     
 - szyfrowanie hasła:ZROBIONE 
 

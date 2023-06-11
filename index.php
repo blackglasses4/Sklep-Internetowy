@@ -1,6 +1,6 @@
 <?php
 session_start();
-?> 
+?>
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
 
@@ -21,7 +21,8 @@ session_start();
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <link src="script.js"></link>
+  <link src="script.js">
+  </link>
 </head>
 
 <body>
@@ -35,272 +36,78 @@ session_start();
     </ul>
 
     <div class="login-icon">
-    <?php 
-    if($_SESSION["username"])
-    {
-    }
-    else
-    {
-      ?><a href="./login.php"><i class="ri-user-fill"></i></a><?php
-    }
-    ?>
-      <a href="./logout.php?logout=<?php echo $_SESSION["username"]; ?>" onclick="return confirm('Jesteś pewien, że chcesz się wylogować?');" class="delete-btn"><i class="ri-user-unfollow-fill"></i></a>
+      <?php
+      if (!$_SESSION["username"]) {
+        header("Location: ./login.php");
+      }
+      ?>
+      <a href="./logout.php?logout=<?php echo $_SESSION["username"]; ?>"
+        onclick="return confirm('Jesteś pewien, że chcesz się wylogować?');" class="delete-btn"><i
+          class="ri-user-unfollow-fill"></i></a>
       <a href="#"><i class='bx bxs-cart'></i></a>
 
       <div class="bx bx-menu" id="menu-icon"></div>
     </div>
   </header class="sticky">
   <main>
+    <section class="main-home">
 
-      <section class="main-home">
-        <div class="main-text">
-          <h5>Winter Collection</h5>
-          <h1>New Winter <br> Collection </h1>
-          <p>There's Nothing like Trend</p>
+      <div class="main-text">
+        <h5>Summer Collection</h5>
+        <h1>New Summer <br> Collection </h1>
+        <p>There's Nothing like Trend</p>
 
-          <a href="./login.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
-        </div>
-
-        <div class="down-arrow">
-          <a href="#trending" class="down"><i class='bx bx-down-arrow-alt' ></i></a>
-        </div>
-      </section>
-      
-      <!-- trending-product-section -->
-      <section id="sklep" class="trending-product" id="trending" aria-labelledby="sklep">
-          <div class="center-text">
-            
-            <?php 
-            if($_SESSION["username"])
-            {
-             ?> <h2>Welcome <span><?php echo $_SESSION["username"];?>!</span></h2> <?php
-            }
-            else
-            {
-              header("Location: ./login.php");
-            }
-            ?>
-
-            <h2> Our Trending <span>Products</span></h2>
-          </div>
-
-          <div class="products">
-            <div class="row">
-              <img src="picture/2.jpg" alt="">
-              <div class="product-text">
-                <h5>Sale</h5>
-              </div>
-              <div class="heart-icon">
-                <i class='bx bx-heart' ></i>
-              </div>
-              <div class="ratting">
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-              </div>
-
-              <div class="price">
-                <h4>Half Running Set</h4>
-                <p>$99 - $129</p>
-                <button>Dodaj do koszyka</button>
-              </div>
-            </div>
-            <!-- ----- -->
-            <div class="row">
-              <img src="picture/5.jpg" alt="">
-              <div class="product-text">
-                <h5>New</h5>
-              </div>
-              <div class="heart-icon">
-                <i class='bx bx-heart' ></i>
-              </div>
-              <div class="ratting">
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-              </div>
-
-              <div class="price">
-                <h4>Half Running Set</h4>
-                <p>$99 - $129</p>
-                <button>Dodaj do koszyka</button>
-              </div>
-            </div>
-            <!-- ----- -->
-            <div class="row">
-              <img src="picture/4.jpg" alt="">
-
-              <div class="heart-icon">
-                <i class='bx bx-heart' ></i>
-              </div>
-              <div class="ratting">
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-              </div>
-
-              <div class="price">
-                <h4>Half Running Set</h4>
-                <p>$99 - $129</p>
-                <button>Dodaj do koszyka</button>
-              </div>
-            </div>
-            <!-- ----- -->
-            <div class="row">
-              <img src="picture/1.jpg" alt="">
-              <div class="product-text">
-                <h5>Hot</h5>
-              </div>
-              <div class="heart-icon">
-                <i class='bx bx-heart' ></i>
-              </div>
-              <div class="ratting">
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-              </div>
-
-              <div class="price">
-                <h4>Half Running Set</h4>
-                <p>$99 - $129</p>
-                <button>Dodaj do koszyka</button>
-              </div>
-            </div>
-            <!-- ----- -->
-            <div class="row">
-              <img src="picture/2.jpg" alt="">
-
-              <div class="heart-icon">
-                <i class='bx bx-heart' ></i>
-              </div>
-              <div class="ratting">
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-              </div>
-
-              <div class="price">
-                <h4>Half Running Set</h4>
-                <p>$99 - $129</p>
-                <button>Dodaj do koszyka</button>
-              </div>
-            </div>
-            <!-- ----- -->
-            <div class="row">
-              <img src="picture/5.jpg" alt="">
-              <div class="product-text">
-                <h5>Hot</h5>
-              </div>
-              <div class="heart-icon">
-                <i class='bx bx-heart' ></i>
-              </div>
-              <div class="ratting">
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-              </div>
-
-              <div class="price">
-                <h4>Half Running Set</h4>
-                <p>$99 - $129</p>
-                <button>Dodaj do koszyka</button>
-              </div>
-            </div>
-            <!-- ----- -->
-            <div class="row">
-              <img src="picture/4.jpg" alt="">
-              <div class="product-text">
-                <h5>Sale</h5>
-              </div>
-              <div class="heart-icon">
-                <i class='bx bx-heart' ></i>
-              </div>
-              <div class="ratting">
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-              </div>
-
-              <div class="price">
-                <h4>Half Running Set</h4>
-                <p>$99 - $129</p>
-                <button>Dodaj do koszyka</button>
-              </div>
-            </div>
-            <!-- ----- -->
-            <div class="row">
-              <img src="picture/1.jpg" alt="">
-              <div class="product-text">
-                <h5>Sale</h5>
-              </div>
-              <div class="heart-icon">
-                <i class='bx bx-heart' ></i>
-              </div>
-              <div class="ratting">
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bx-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-              </div>
-
-              <div class="price">
-                <h4>Half Running Set</h4>
-                <p>$99 - $129</p>
-                <button>Dodaj do koszyka</button>
-              </div>
-            </div>
-            <!-- ----- -->
-          </div>
-
-      </section>
-
-      <!-- contact-section -->
-
-      <section class="contact" aria-labelledby="kontakt">
-        <div class="contact-info">
-          <div class="first-info">
-            <h1 id="kontakt">Nazwa Firmy</h1>
-            
-            <div class="social-icon">
-              <a href="#"><i class='bx bxl-facebook'></i></a>
-              <a href="#"><i class='bx bxl-instagram' ></i></a>
-              <a href="#"><i class='bx bxl-youtube' ></i></a>
-            </div>
-
-            <div class="second-info">
-              <h4>Contact us</h4>
-              <p>Privacy</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="end-text">
-        <p>©Copyright 2023 by nobody. All rights reversed.</p>
+        <a href="./login.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
       </div>
+
+      <div class="down-arrow">
+        <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+      </div>
+    </section>
+
+    <!-- trending-product-section -->
+    <section id="sklep" class="trending-product" id="trending" aria-labelledby="sklep">
+      <div class="center-text">
+
+        <section class="main-promote">
+          <div class="main-text2">
+            <h5>Don't wait</h5>
+            <h1>Discounts on<br> New shoes</h1>
+            <p>Don't miss this </p>
+
+            <a href="./login.php" class="main-shop">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+          <div class="down-arrow">
+            <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+          </div>
+        </section>
+    </section>
+
+    <!-- contact-section -->
+
+    <section class="contact" aria-labelledby="kontakt">
+      <div class="contact-info">
+        <div class="first-info">
+          <h1 id="kontakt">Nazwa Firmy</h1>
+
+          <div class="social-icon">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+          </div>
+
+          <div class="second-info">
+            <h4>Contact us</h4>
+            <p>Privacy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="end-text">
+      <p>©Copyright 2023 by nobody. All rights reversed.</p>
+    </div>
   </main>
 </body>
+
 </html>

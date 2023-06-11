@@ -1,0 +1,225 @@
+/* CSS dla strony dodawanieiusuwanie.php */
+
+body {
+    background-image: url('../picture/7.jpg'); /* Zmień '7' na właściwą ścieżkę do pliku */
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #cbcbcb;
+}
+
+.form-field input[type="text"],
+.form-field input[type="number"] {
+    margin: 10px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease;
+    background-color: #3b4148; /* Jasno szary kolor tła */
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="number"]:focus {
+    border-color: #999;
+}
+
+.form-field input[type="text"]:hover,
+.form-field input[type="number"]:hover {
+    background-color: #434a52; /* Ciemniejszy kolor tła po najechaniu myszką */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #cbcbcb;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    padding: 8px;
+    width: 100%;
+    border: 0px solid #ff0000;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus {
+    border-color: #999;
+}
+
+.input-file-label {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ccc;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-file-label:hover {
+    background-color: #999;
+}
+
+.input-submit-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-submit-button:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #c6efce;
+    border: 1px solid #6ca75c;
+    color: #264409;
+    border-radius: 4px;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.product-table td.photo {
+    width: 100px;
+}
+
+.product-table img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-table .delete-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ff5b5b;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-table .delete-button:hover {
+    background-color: #ff3030;
+}
+
+.product-table .add-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-table .add-button:hover {
+    background-color: #45a049;
+}
+.popup-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    text-align: center;
+    width: 400px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.popup-message .success-message {
+    margin: 0;
+    padding: 5px;
+}
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+.add-photo-button {
+    position: relative;
+    padding: 10px 20px;
+    background: #ff8e61;
+    border-radius: 15px;
+    border: none;
+    color: #212121;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.add-photo-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: rgb(24, 54, 12);
+    z-index: -1;
+    box-shadow: 4px 8px 30px -3px rgba(255, 255, 255, 0.13);
+    transition: all 250ms;
+}
+
+.add-photo-button:hover {
+    color: #e8e8e8;
+}
+
+.add-photo-button:hover::before {
+    width: 100%;
+}
+.hidden-input {
+    display: none;
+}
+
