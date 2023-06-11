@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trending Products</title>
-    <link rel="stylesheet" href="styles-sklep.css">
+    <link rel="stylesheet" href="styles-sklep2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -76,8 +76,8 @@ session_start();
                         <!-- Dodany przycisk "Dodaj do koszyka" -->
                         <form method="post" action="./cart/cart.php">
                             <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
-                            <input type="number" name="quantity" value="1" min="1">
-                            <input type="submit" name="add_to_cart" value="Dodaj do koszyka">
+                            <input type="number" name="quantity" class="add_to_number" value="1" min="1">
+                            <input type="submit" name="add_to_cart" class="add_to_cart" value="Dodaj do koszyka">
                         </form>
                     </div>
                 <?php

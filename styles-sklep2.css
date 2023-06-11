@@ -356,7 +356,7 @@ heart-icon {
     }
 }
 
-button {
+.add_to_cart {
     padding: 10px 15px;
     border: unset;
     border-radius: 15px;
@@ -373,7 +373,7 @@ button {
     margin-top: 10px;
    }
    
-   button::before {
+.add_to_cart::before {
     content: "";
     position: absolute;
     top: 0;
@@ -385,13 +385,34 @@ button {
     z-index: -1;
     -webkit-box-shadow: 4px 8px 30px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 10px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms
+    transition: all 250ms;
    }
    
-   button:hover {
+.add_to_cart:hover {
     color: #e8e8e8;
+    background-color: rgb(65, 123, 150);
+    transition: all 250ms;
    }
    
-   button:hover::before {
+.add_to_cart:hover::before {
     width: 100%;
    }
+
+.add_to_number {
+    border: none;
+    padding: 0.5rem;
+    padding-right: 5px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 40px #161616;
+    transition: 0.3s;
+   }
+   
+.add_to_number:focus {
+    outline-color: rgb(207, 218, 223);
+    background: rgb(165, 176, 180);
+    box-shadow: inset 20px 20px 60px rgb(118, 188, 231),
+           inset -20px -20px 60px rgb(0, 255, 0);
+    transition: 0.3s;
+}

@@ -18,6 +18,7 @@ session_start();
 </head>
 
 <body>
+    <h1>Złóż zamówienie</h1>
     <div class="container">
         <form action="include/zamówienie.inc.php" method="POST" class="form login">
 

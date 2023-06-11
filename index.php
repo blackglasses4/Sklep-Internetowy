@@ -44,7 +44,7 @@ session_start();
       <a href="./logout.php?logout=<?php echo $_SESSION["username"]; ?>"
         onclick="return confirm('Jesteś pewien, że chcesz się wylogować?');" class="delete-btn"><i
           class="ri-user-unfollow-fill"></i></a>
-      <a href="#"><i class='bx bxs-cart'></i></a>
+      <a href="./sklep.php"><i class='bx bxs-cart'></i></a>
         <?php
         if (isset($_SESSION['id_role']) && $_SESSION['id_role'] != 1) {
             echo '<a href="./admin/include/users.crud.php"><i class="bx bx-menu" id="menu-icon"></i></a>';
