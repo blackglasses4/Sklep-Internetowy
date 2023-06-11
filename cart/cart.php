@@ -6,7 +6,7 @@ if (!isset($_SESSION['cart'])) {
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "stronaWWW";
+$dbname = "StronaWWW";
 
 // Nawiązanie połączenia z bazą danych
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -81,6 +81,7 @@ if (isset($_GET['remove_from_cart'])) {
     <meta charset="UTF-8">
     <title>Koszyk</title>
     <link rel="stylesheet" href="../produkty/styl_produkty2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <script src="../script.js"></script>
 </head>
 <body>
@@ -97,23 +98,26 @@ if (isset($_GET['remove_from_cart'])) {
                 <th>Akcje</th>
             </tr>
             <?php
-            // Pobranie przedmiotów z tabeli cart dla danego użytkownika
-            $user_id = $_SESSION['user_id'];
-            $sql = "SELECT * FROM cart INNER JOIN products ON cart.product_id = products.id WHERE cart.user_id = '$user_id'";
-            $result = $conn->query($sql);
 
-            while ($row = $result->fetch_assoc()) {
-                ?>
-                <tr>
-                    <td><?php echo $row['product_id']; ?></td>
-                    <td><?php echo $row['name']; ?></td>
-                    <td><?php echo $row['price']; ?> zł</td>
-                    <td class="photo"><img src="../picture/<?php echo $row['photo']; ?>"></td>
-                    <td><?php echo $row['quantity']; ?></td>
-                    <td><a href="cart.php?remove_from_cart=<?php echo $row['product_id']; ?>"
-                           class="delete-button">Usuń</a></td>
-                </tr>
-            <?php } ?>
+            // Pobranie przedmiotów z tabeli cart dla danego użytkownika
+                $user = $_SESSION['user_id'];
+                $sql = "SELECT * FROM cart INNER JOIN products ON cart.product_id = products.id WHERE cart.user_id = '$user'";
+                $result = $conn->query($sql);
+
+                while ($row = $result->fetch_assoc()) {
+                    ?>
+                    <tr>
+                        <td><?php echo $row['product_id']; ?></td>
+                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo $row['price']; ?> zł</td>
+                        <td class="photo"><img src="../picture/<?php echo $row['photo']; ?>"></td>
+                        <td><?php echo $row['quantity']; ?></td>
+                        <td><a href="cart.php?remove_from_cart=<?php echo $row['product_id']; ?>"
+                            class="delete-button">Usuń</a></td>
+                    </tr>
+            
+            <?php
+            }?>
         </table>
     <?php else: ?>
         <p>Koszyk jest pusty.</p>
