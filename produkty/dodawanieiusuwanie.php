@@ -1,4 +1,6 @@
 <?php
+require_once "../config.php";
+
 // Połączenie z bazą danych
 $servername = "localhost";
 $username = "root";
@@ -16,7 +18,7 @@ if ($conn->connect_error) {
 date_default_timezone_set('Europe/Warsaw');
 
 // Zdefiniowanie folderu dla przesyłanych zdjęć
-$uploadDir = 'picture/';
+$uploadDir = $PATH_PREFIX.'picture/';
 
 // Komunikat o sukcesie
 $successMessage = "";
@@ -33,7 +35,7 @@ if (isset($_POST['add_product'])) {
 
     // Dodanie produktu do bazy danych
     // Dodanie produktu do bazy danych
-    $sql = "INSERT INTO products (name, price, photo) VALUES ('$name', '$price', '$photo')";
+    $sql = "INSERT INTO products (name, price, photo_id, photo) VALUES ('$name', '$price', 1, '$photo')";
 
     if ($conn->query($sql) === true) {
         $successMessage = "Produkt został dodany pomyślnie.";
@@ -135,7 +137,7 @@ $result = $conn->query($sql);
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['price']; ?> zł</td>
-                <td class="photo"><img src="zdjecia/<?php echo $row['photo']; ?>"></td>
+                <td class="photo"><img src="../picture/<?php echo $row['photo']; ?>"></td>
                 <td><a href="dodawanieiusuwanie.php?delete_product=<?php echo $row['id']; ?>" class="delete-button">Usuń produkt</a></td>
             </tr>
         <?php endwhile; ?>
