@@ -12,7 +12,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(221, 184, 184, 0);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #fff;
     text-align: center;
@@ -20,7 +20,7 @@ body {
 
 h2 {
     margin-bottom: 20px;
-    color: #cbcbcb;
+    color: #ffffff;
 }
 
 .form-field input[type="text"],
@@ -186,10 +186,12 @@ input[type="file"]:focus {
     align-items: center;
     margin-top: 20px;
 }
-.add-photo-button {
+
+.add-photo-button,
+.add-button-product {
     position: relative;
     padding: 10px 20px;
-    background: #ff8e61;
+    background: #ff5b5b;
     border-radius: 15px;
     border: none;
     color: #212121;
@@ -198,27 +200,16 @@ input[type="file"]:focus {
     z-index: 1;
 }
 
-.add-photo-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    border-radius: 15px;
-    background-color: rgb(24, 54, 12);
-    z-index: -1;
-    box-shadow: 4px 8px 30px -3px rgba(255, 255, 255, 0.13);
-    transition: all 250ms;
-}
-
-.add-photo-button:hover {
+.add-photo-button:hover,
+.add-button-product:hover {
     color: #e8e8e8;
 }
 
-.add-photo-button:hover::before {
+.add-photo-button:hover::before,
+.add-button-product:hover::before {
     width: 100%;
 }
+
 .hidden-input {
     display: none;
 }

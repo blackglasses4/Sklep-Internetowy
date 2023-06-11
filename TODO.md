@@ -39,7 +39,7 @@
 
 - trzy poziomy uprawnień: ZROBIONE
 
-- różne strony się pokazują w zależności od poziomu uprawnień: ZROBIONE prawie, bo 2 uprawnienia na razie ZARAZ DAMY STRONĘ, GDZIE MA PÓJŚĆ MODERATOR I ADMIN DO PRODUKTÓW: ADA!!!!
+- różne strony się pokazują w zależności od poziomu uprawnień: ZROBIONE prawie, bo 2 uprawnienia na razie ZARAZ DAMY STRONĘ, GDZIE MA PÓJŚĆ MODERATOR I ADMIN DO PRODUKTÓW: ZROBIONE
 
 - zarządzanie użytkownikami w panelu użytkownika (CRUD): ZROBIONE
 

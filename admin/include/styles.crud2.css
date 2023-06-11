@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(166, 173, 185);
+}
+
+
+h1 {
+    align-items: center;
+    top: 10px;
+    width:100%;
+    height:100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size:60px;
+    text-align:center;
+    font-weight: 600;
+    color: rgb(39, 34, 34);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 88%;
+}
