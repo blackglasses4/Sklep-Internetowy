@@ -47,7 +47,7 @@ session_start();
       <a href="#"><i class='bx bxs-cart'></i></a>
         <?php
         if (isset($_SESSION['id_role']) && $_SESSION['id_role'] != 1) {
-            echo '<a href="./produkty/dodawanieiusuwanie.php"><i class="bx bx-menu" id="menu-icon"></i></a>';
+            echo '<a href="./admin/include/users.crud.php"><i class="bx bx-menu" id="menu-icon"></i></a>';
         }
         ?>
     </div>
