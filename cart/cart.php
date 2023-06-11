@@ -1,8 +1,11 @@
 <?php
+session_start();
+
 // Sprawdzenie czy koszyk istnieje w sesji
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -15,6 +18,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Błąd połączenia: " . $conn->connect_error);
 }
+
 // Dodawanie produktu do koszyka
 if (isset($_POST['add_to_cart'])) {
     $product_id = $_POST['product_id'];
@@ -55,7 +59,6 @@ if (isset($_POST['add_to_cart'])) {
         $errorMessage = "Produkt o podanym identyfikatorze nie istnieje.";
     }
 }
-
 
 /// Usuwanie produktu z koszyka
 if (isset($_GET['remove_from_cart'])) {
@@ -100,8 +103,9 @@ if (isset($_GET['remove_from_cart'])) {
             <?php
 
             // Pobranie przedmiotów z tabeli cart dla danego użytkownika
-                $user = $_SESSION['user_id'];
-                $sql = "SELECT * FROM cart INNER JOIN products ON cart.product_id = products.id WHERE cart.user_id = '$user'";
+            if (isset($_SESSION['user_id'])) {
+                $user_id = $_SESSION['user_id'];
+                $sql = "SELECT * FROM cart INNER JOIN products ON cart.product_id = products.id WHERE cart.user_id = '$user_id'";
                 $result = $conn->query($sql);
 
                 while ($row = $result->fetch_assoc()) {
@@ -113,11 +117,12 @@ if (isset($_GET['remove_from_cart'])) {
                         <td class="photo"><img src="../picture/<?php echo $row['photo']; ?>"></td>
                         <td><?php echo $row['quantity']; ?></td>
                         <td><a href="cart.php?remove_from_cart=<?php echo $row['product_id']; ?>"
-                            class="delete-button">Usuń</a></td>
+                               class="delete-button">Usuń</a></td>
                     </tr>
-            
-            <?php
-            }?>
+                    <?php
+                }
+            }
+            ?>
         </table>
     <?php else: ?>
         <p>Koszyk jest pusty.</p>
@@ -125,17 +130,19 @@ if (isset($_GET['remove_from_cart'])) {
 
 
     <div class="popup-message">
-    <?php if (isset($successMessage)): ?>
-        <div class="success-message"><?php echo $successMessage; ?></div>
-    <?php elseif (isset($errorMessage)): ?>
-        <div class="error-message"><?php echo $errorMessage; ?></div>
-    <?php endif; ?>
-</div>
+        <?php if (isset($successMessage)): ?>
+            <div class="success-message"><?php echo $successMessage; ?></div>
+        <?php elseif (isset($errorMessage)): ?>
+            <div class="error-message"><?php echo $errorMessage; ?></div>
+        <?php endif; ?>
+    </div>
 
-<!-- Dodany przycisk powrotu do sklep.php -->
-<div class="return-button-container">
-    <a href="../zamówienie.php" class="return-button">Zamów</a><br>
-    <br><a href="../sklep.php" class="return-button">Powrót do sklepu</a>
+    <!-- Dodany przycisk powrotu do sklep.php -->
+    <div class="return-button-container">
+        <a href="../zamówienie.php" class="return-button">Zamów</a><br>
+        <br><a href="../sklep.php" class="return-button">Powrót do sklepu</a>
+    </div>
+
 </div>
 
 </body>
